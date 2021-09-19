@@ -1,5 +1,5 @@
 import React from 'react'
-// import useClock from '../../hooks/useClock'
+import useClock from '../assets/Jam/useClock'
 import { NavLink } from 'react-router-dom'
 
 import Navbar from '../Navbar'
@@ -7,7 +7,7 @@ import model from '../assets/Pict/matthew-hamilton-tNCH0sKSZbA-unsplash.jpg'
 import '../assets/CSS/home.css'
 
 export default function Home() {
-  // const timestamp = useClock()
+  const timestamp = useClock()
   return (
     <div id="my-content">
       <Navbar />
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="header-body d-flex justify-content-center ">
         <div className="container mt-5">
           <div className="row mb-5">
-            {/* <h1 style={{ margin: 'auto', textAlign: 'center' }}>{timestamp}</h1> */}
+            <h1 style={{ margin: 'auto', textAlign: 'center' }}>{timestamp}</h1>
           </div>
           <div className="row">
             <div className="col-md-5 ">

@@ -22,7 +22,7 @@
   
   .my-img {
     display: block;
-    width: 90%;
+    width: 30%;
     border-radius: 50%;
   }
   
@@ -30,6 +30,7 @@
     width: 150px;
     height: 40px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 24px;
     background-color: var(--orange);
     border-color: var(--orange) !important;
@@ -42,18 +43,24 @@
   
   .deskripsi {
     color: var(--blue);
+    font-size: 20px;
+    margin-bottom: 0%;
   }
+
   h6.deskripsi {
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 0%;
   }
   h1.deskripsi {
-    font-size: 85px;
+    font-size: 40px;
     font-weight: 600;
+    margin-bottom: 0%;
+    margin-top: 5px;
   }
   h4.deskripsi {
-    font-size: 35px;
-    margin-top: 21px;
-    margin-bottom: 32px;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: -30px;
   }
   
   .my-active {
