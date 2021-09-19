@@ -139,7 +139,7 @@ export default function ContactUs() {
           <div className="mb-4">
             <label htmlFor="nationality" className="form-label">
               Nationality
-            </label>
+            </label><br/>
             <select
               value={contact.nationality.value}
               onChange={formChangedHandler}
@@ -154,7 +154,7 @@ export default function ContactUs() {
               <option value="Filipina">Filipina</option>
               <option value="Thailand">Thailand</option>
             </select>
-          </div>
+          </div><br/>
 
           <div className="mb-2">
             <label htmlFor="message" className="form-label">
