@@ -7,25 +7,38 @@ import '../assets/CSS/contact.css'
 import poster from '../assets/Pict/charles-rRWiVQzLm7k-unsplash.jpg'
 import logo from '../assets/Pict/logo-ALTA-v2.png'
 
+
 export default function ContactUs() {
   const contact = useSelector((state) => state.contact)
+  //baris 12 useselector nerima func untuk askses redux pada atribut contact (baris 32, index.js)
   const dispatch = useDispatch()
+  //usedispatcg mereturn fungsi sehingga bisa dispatch / meneruskan ke reduce
   const history = useHistory()
+  //usehistory adalah hook yg disediakan react-router-dom supaya dpt objek histori 
+  //history adlh objek yg disediakan oleh react-router-dom untuk manipulasi link(url) misalkan redirect/ push link baru 
+  //di line 51
 
+  //19 extract name value dr form input user
   function formChangedHandler(e) {
     const { name, value } = e.target
     dispatch(changed({ name, value }))
   }
 
+  //24 fungsi yang dijalankan ketika disentuh user
+  //e.target objek bawaan js yg berisi field name
   function touchedHandler(e) {
     const { name } = e.target
     dispatch(touched({ name }))
   }
 
+//prevent default mencegah form tidak request ke server sehingga halaman web tdk reload
+//dan kode dibawah line 33 dpt dieksekusi dgn bnr
+//is valid ngecek input user yg g valid
   function submitHandler(e) {
     e.preventDefault()
     let isValid = true
 
+    //untuk ngecek setiap field pada form valid atau tdk 
     for (const field in contact) {
       const input = contact[field]
 
@@ -35,6 +48,7 @@ export default function ContactUs() {
       }
     }
 
+    //when valid maka isvalid true, if not isvalid false
     !isValid && alert('Form tidak valid! Pastikan field terisi dengan benar')
     isValid ? history.push('/review') : dispatch(findAllInvalid())
   }
@@ -42,10 +56,14 @@ export default function ContactUs() {
   // * useEffect ini akan dijalankan 1x saja
   // Docs react-redux bilang kalau dispatch itu akan selalu sama valuenya
   // Selama store kita ngga berubah (reducernya ngga berubah).
+
+  //useeffect when hal dirender pertama x redux akan bernilai inisial value (contact.js line 10) karena mendispatch action reset
+  //act reset (contact.js line 65)
   useEffect(() => {
     dispatch(reset())
   }, [dispatch])
 
+  //untuk ngerender kode html di bawah pada hal web (dom)
   return (
     <main>
       <div className="container-content-image">

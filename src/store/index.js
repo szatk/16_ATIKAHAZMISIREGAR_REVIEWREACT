@@ -11,6 +11,7 @@ const store = configureStore({
   }
 })
 export default store */
+// Baris 43 untuk menghubungkan supaya ke simpan di store berkaitan dengan baris 18
 
 import { combineReducers } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
@@ -29,7 +30,7 @@ import {
 import contactReducer from './contact'
 
 const rootReducer = combineReducers({ contact: contactReducer })
-
+//isi contact reducer contact.js
 const persistConfig = {
   key: 'root',
   version: 1,

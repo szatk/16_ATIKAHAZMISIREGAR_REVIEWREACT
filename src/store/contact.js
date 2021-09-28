@@ -38,6 +38,8 @@ const initialState = {
   }
 }
 
+//isinya slice yg berisi state
+//43 adalah reducer + state redux
 const slice = createSlice({
   name: 'contact',
   initialState: initialState,

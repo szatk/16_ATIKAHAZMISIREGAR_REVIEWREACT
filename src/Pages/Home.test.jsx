@@ -17,7 +17,7 @@ describe('Home page', () => {
     expect(screen.getByText(/\d{2}:\d{2}:\d{2}/i)).toBeInTheDocument()
   })
 
-  it('Should diplay get in touch button', () => {
+  it('Should display get in touch button', () => {
     expect(screen.getByText(/get in touch/i)).toBeInTheDocument()
   })
 })
