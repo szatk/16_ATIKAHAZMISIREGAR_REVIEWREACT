@@ -15,16 +15,15 @@ export default function ContactUs() {
   //usedispatcg mereturn fungsi sehingga bisa dispatch / meneruskan ke reduce
   const history = useHistory()
   //usehistory adalah hook yg disediakan react-router-dom supaya dpt objek histori 
-  //history adlh objek yg disediakan oleh react-router-dom untuk manipulasi link(url) misalkan redirect/ push link baru 
-  //di line 51
+  //history adlh objek yg disediakan oleh react-router-dom untuk manipulasi link(url) misalkan redirect/ push link baru di line 51
 
-  //19 extract name value dr form input user
+  //21 extract name value drari form input user
   function formChangedHandler(e) {
     const { name, value } = e.target
     dispatch(changed({ name, value }))
   }
 
-  //24 fungsi yang dijalankan ketika disentuh user
+  //28 fungsi yang dijalankan ketika disentuh user
   //e.target objek bawaan js yg berisi field name
   function touchedHandler(e) {
     const { name } = e.target
